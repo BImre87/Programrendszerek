@@ -1,0 +1,20 @@
+<div class="content" role="main">
+    <h2>Belépés</h2>
+    <div>
+      <span>
+        <label>Felhasználónév</label>
+        <input type="text" id="username" [(ngModel)]="username">
+      </span>
+    </div>
+    <div>
+      <span>
+        <label>Jelszó</label>
+        <input type="password" id="password" [(ngModel)]="password">
+      </span>
+    </div>
+    <div>
+      <button (click)="login()">Belépés</button>
+      <button type="button" (click)="regisztracio()">Regisztráció</button>
+    </div>
+    
+</div>

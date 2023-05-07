@@ -1,0 +1,27 @@
+<div *ngIf="message">
+  <strong> {{valasz}}</strong>
+</div>
+<div style="text-align: center;">
+    <h3>Felhasználó adatai</h3>
+    <div>
+      <div>
+        <label>Felhasználónév</label>
+        <input [(ngModel)]="user.username" id="username" disabled type="text" required />
+      </div>
+      <div>
+        <label>Jelszó:</label>
+        <input [(ngModel)]="user.password" id="password" type="password" required />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input [(ngModel)]="user.email" id="email" type="text" required />
+      </div>
+      <div>
+        <label>Ország:</label>
+        <input [(ngModel)]="user.country" id="country" type="text" required />
+      </div>
+      <button type="button" (click)="vissza()">Vissza</button>
+      <button *ngIf="level == '3'" type="button" (click)="szerkesztes()">Szerkesztés</button>
+      <button *ngIf="level == '3'" type="button" (click)="torles()">Torlés</button>
+    </div>
+  </div>

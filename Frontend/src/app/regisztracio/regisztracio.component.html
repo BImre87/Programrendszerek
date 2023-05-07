@@ -1,0 +1,30 @@
+<div *ngIf="message">
+  <strong> {{valasz}}</strong>
+</div>
+
+<div style="text-align: center;">
+    <h3>Regisztráció</h3>
+    <div>
+      <div>
+        <label>Felhasználónév:</label>
+        <input [(ngModel)]="form.username" id="username" type="text" required />
+      </div>
+      <div>
+        <label>Jelszó:</label>
+        <input [(ngModel)]="form.password" id="password" type="password" required />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input [(ngModel)]="form.email" id="email" type="text" required />
+      </div>
+      <div>
+        <label>Ország:</label>
+        <input [(ngModel)]="form.country" id="country" type="text" required />
+      </div>
+      <div>
+        <button type="button" (click)="registration()">Küldés</button>
+        <button type="button" (click)="login()">Vissza</button>
+      </div>
+
+    </div>
+  </div>

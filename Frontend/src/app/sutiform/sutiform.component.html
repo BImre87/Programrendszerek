@@ -1,0 +1,30 @@
+<div *ngIf="message">
+    <strong> {{valasz}}</strong>
+  </div>
+  
+  <div style="text-align: center;">
+      <h3>Süti felvétel</h3>
+      <div>
+        <div>
+          <label>Megnevezés:</label>
+          <input [(ngModel)]="form.megnevezes" id="megnevezes" type="text" required />
+        </div>
+        <div>
+          <label>Súly:</label>
+          <input [(ngModel)]="form.suly" id="suly" type="number" required />{{'g'}}
+        </div>
+        <div>
+          <label>Cukortartalom:</label>
+          <input [(ngModel)]="form.cukortartalom" id="cukortartalom" type="number" required />{{'%'}}
+        </div>
+        <div>
+          <label>Ár:</label>
+          <input [(ngModel)]="form.ar" id="ar" type="number" required />
+        </div>
+        <div>
+          <button type="button" (click)="addSuti()">Küldés</button>
+          <button type="button" (click)="vissza()">Menü</button>
+        </div>
+  
+      </div>
+    </div>

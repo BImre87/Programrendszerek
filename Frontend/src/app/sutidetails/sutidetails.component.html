@@ -1,0 +1,27 @@
+<div *ngIf="message">
+    <strong> {{valasz}}</strong>
+  </div>
+  <div style="text-align: center;">
+      <h3>Süti infó</h3>
+      <div>
+        <div>
+          <label>Megnevezés:</label>
+          <input [(ngModel)]="suti.megnevezes" id="megnevezes" disabled type="text" required />
+        </div>
+        <div>
+          <label>Súly:</label>
+          <input [(ngModel)]="suti.suly" id="suly" type="number" required />{{'g'}}
+        </div>
+        <div>
+          <label>Cukortartalom:</label>
+          <input [(ngModel)]="suti.cukortartalom" id="cukortartalom" type="number" required />{{'%'}}
+        </div>
+        <div>
+          <label>Ár:</label>
+          <input [(ngModel)]="suti.ar" id="ar" type="number" required />
+        </div>
+        <button type="button" (click)="vissza()">Vissza</button>
+        <button *ngIf="level == '3'" type="button" (click)="szerkesztes()">Szerkesztes</button>
+        <button *ngIf="level == '3'" type="button" (click)="torles()">Torles</button>
+      </div>
+    </div>

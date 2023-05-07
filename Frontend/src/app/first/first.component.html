@@ -1,0 +1,42 @@
+<div class="content" role="main">
+
+  <h3>Felhasználók</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Felhasználónév</th>
+        <th>Részletek</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of elist;">
+        <td>{{item.username}}</td>
+        <td><button type="button" (click)="reszletek(item.username)">Részletek</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Sütemények</h3>
+  <div>
+    <td><button type="button" (click)="sutiFelvetel()">Süti felvétel</button></td>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Megnevezés</th>
+        <th>Részletek</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of sList;">
+        <td>{{s.megnevezes}}</td>
+        <td><button type="button" (click)="sutiadatok(s.megnevezes)">Részletek</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/login']">Kijelentkezés</a>
+</div>
+
+
+
+
